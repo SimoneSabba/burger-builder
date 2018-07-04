@@ -37,8 +37,6 @@ class BurgerIngredient extends Component {
                 break;
         }
 
-        console.log(ingredient);
-
         return ingredient;
     }
 
