@@ -69,6 +69,10 @@ class BurgerBuilder extends Component {
         this.setState({ purchasing: false });
     }
 
+    purchaseContinueHandler = () => {
+        console.log('checkout');
+    }
+
     render() {
         const disabledItems = { ...this.state.ingredients };
         for (let k in disabledItems) {
@@ -77,7 +81,7 @@ class BurgerBuilder extends Component {
         return(
             <Fragment>
                 <Modal show={this.state.purchasing} clicked={this.purchaseCancelHandler}>
-                    <OrderSummary ingredients={this.state.ingredients}/>
+                    <OrderSummary ingredients={this.state.ingredients} cancel={this.purchaseCancelHandler} checkout={this.purchaseContinueHandler}/>
                 </Modal>
                 <Burger ingredients={this.state.ingredients}/>
                 <BurgerControls
