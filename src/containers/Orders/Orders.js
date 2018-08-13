@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from '../../axios-order';
 import Order from '../../components/Order/Order';
-import Spinner from '../../components/UI/Spinner/Spinner';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 
 class Orders extends Component {
